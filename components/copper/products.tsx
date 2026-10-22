@@ -48,8 +48,8 @@ export function Products() {
                   alt={`${product.name} ${product.type} in ${product.colors[0]}`}
                   width={CUTOUT_SIZE}
                   height={CUTOUT_SIZE}
-                  sizes="256px"
-                  className="h-auto w-full max-w-64"
+                  sizes="(min-width: 768px) 256px, 192px"
+                  className="h-auto w-full max-w-48 md:max-w-64"
                 />
               </div>
               <ul
