@@ -1,3 +1,4 @@
+import { BackToTop } from "@/components/copper/back-to-top";
 import { Hero } from "@/components/copper/hero";
 import { PlusPricing } from "@/components/copper/plus-pricing";
 import { Privacy } from "@/components/copper/privacy";
@@ -25,6 +26,7 @@ export default function Home() {
         <Privacy />
       </main>
       <SiteFooter />
+      <BackToTop />
     </>
   );
 }

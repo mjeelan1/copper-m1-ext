@@ -1,13 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/copper/logo";
 import { ModeToggle } from "@/components/copper/mode-toggle";
-
-// In-page jumps to the landing page sections.
-const NAV_LINKS = [
-  { href: "#products", label: "Products" },
-  { href: "#plus", label: "Copper Plus" },
-  { href: "#privacy", label: "Privacy" },
-];
+import { SectionNav } from "@/components/copper/section-nav";
 
 // Sticky and slim. On phones the links drop to a second row under the logo.
 // Every link and button is at least 44px tall, so it's easy to tap.
@@ -25,20 +19,7 @@ export function SiteHeader() {
         >
           <Logo className="w-32 md:w-44" />
         </Link>
-        <nav
-          aria-label="Main"
-          className="order-last flex w-full justify-center gap-2 md:order-none md:ml-auto md:w-auto"
-        >
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-muted-foreground hover:text-foreground focus-visible:ring-ring inline-flex h-11 items-center rounded-sm px-2 text-sm font-medium transition-colors outline-none focus-visible:ring-3"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        <SectionNav className="order-last flex w-full justify-center gap-2 md:order-none md:ml-auto md:w-auto" />
         <ModeToggle />
       </div>
     </header>
