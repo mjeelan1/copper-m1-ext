@@ -1,3 +1,4 @@
+import { NextStep } from "@/components/copper/next-step";
 import { PlanPicker } from "@/components/copper/plan-picker";
 import { getPlans } from "@/lib/copper/catalog";
 
@@ -16,6 +17,11 @@ export function PlusPricing() {
           everyone in the house.
         </p>
         <PlanPicker plans={plans} />
+        <NextStep
+          text="Curious what Copper keeps, and for how long?"
+          href="#privacy"
+          label="Read our privacy promise"
+        />
       </div>
     </section>
   );

@@ -75,6 +75,13 @@ describe("PlusPricing", () => {
     );
   });
 
+  it("links on to the privacy promise", () => {
+    render(<PlusPricing />);
+    expect(
+      screen.getByRole("link", { name: "Read our privacy promise" }),
+    ).toHaveAttribute("href", "#privacy");
+  });
+
   it("follows the catalog when Copper Plus prices change", async () => {
     vi.resetModules();
     vi.doMock("@/lib/copper/catalog", async (importOriginal) => {
