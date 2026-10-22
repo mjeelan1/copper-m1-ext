@@ -59,7 +59,7 @@ export function Products() {
                 {product.colors.map((color) => (
                   <li
                     key={color}
-                    className="text-muted-foreground flex items-center gap-2 text-xs"
+                    className="text-muted-foreground flex items-center gap-2 text-sm"
                   >
                     <span
                       aria-hidden

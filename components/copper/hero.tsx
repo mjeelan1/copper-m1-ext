@@ -23,7 +23,13 @@ export function Hero() {
           <p className="text-muted-foreground text-xl">
             From raw ideas to refined answers.
           </p>
-          <Button asChild size="lg" className="h-11 px-6 text-base">
+          {/* 20px bold counts as large text, which Night Sky on Copper
+              (4.1:1) passes. */}
+          <Button
+            asChild
+            size="lg"
+            className="focus-visible:ring-ring h-12 px-6 text-xl font-bold"
+          >
             <a href="#products">See products</a>
           </Button>
         </div>

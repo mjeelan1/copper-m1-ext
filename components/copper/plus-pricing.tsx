@@ -104,7 +104,7 @@ function PlanRow({
     <div className="flex items-start justify-between gap-4 py-3">
       <dt className="text-muted-foreground">
         {label}
-        {note && <span className="block text-xs">{note}</span>}
+        {note && <span className="block text-sm">{note}</span>}
       </dt>
       <dd className="flex shrink-0 items-center gap-1.5 text-right font-medium">
         {children}

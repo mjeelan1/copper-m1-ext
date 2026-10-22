@@ -10,25 +10,30 @@ const NAV_LINKS = [
 ];
 
 // Sticky and slim. On phones the links drop to a second row under the logo.
+// Every link and button is at least 44px tall, so it's easy to tap.
 export function SiteHeader() {
   return (
     <header
       data-testid="site-header"
       className="bg-background/95 sticky top-0 z-50 border-b backdrop-blur"
     >
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 px-4 py-3">
-        <Link href="/" aria-label="Copper State Labs home">
+      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 px-4 md:py-2">
+        <Link
+          href="/"
+          aria-label="Copper State Labs home"
+          className="focus-visible:ring-ring inline-flex h-11 items-center rounded-sm outline-none focus-visible:ring-3"
+        >
           <Logo className="w-32 md:w-44" />
         </Link>
         <nav
           aria-label="Main"
-          className="order-last flex w-full justify-center gap-6 pt-2 md:order-none md:ml-auto md:w-auto md:pt-0"
+          className="order-last flex w-full justify-center gap-2 md:order-none md:ml-auto md:w-auto"
         >
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/50 rounded-sm text-sm font-medium transition-colors outline-none focus-visible:ring-3"
+              className="text-muted-foreground hover:text-foreground focus-visible:ring-ring inline-flex h-11 items-center rounded-sm px-2 text-sm font-medium transition-colors outline-none focus-visible:ring-3"
             >
               {link.label}
             </a>
